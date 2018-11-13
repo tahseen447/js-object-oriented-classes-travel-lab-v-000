@@ -26,4 +26,13 @@ class Route{
     let horizontalDiff = this.avenueToInteger(this.endingLocation.horizontal) - this.avenueToInteger(this.beginningLocation.horizontal);
     return verticalDiff + horizontalDiff;
   }
+
+  estimatedTime(peakHours){
+    if(peakHours) {
+      return this.blocksTravelled/2;
+    }
+    else {
+      return this.blocksTravelled/3;
+    }
+  }
 }
