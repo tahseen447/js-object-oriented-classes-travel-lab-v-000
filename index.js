@@ -19,7 +19,10 @@ class Route{
   avenueToInteger(avenue){
     return eastWest.indexOf(avenue);
   }
-  blocksTravelled(){
 
+  blocksTravelled(){
+    let verticalDiff = this.endingLocation.vertical - this.beginningLocation.vertical;
+    let horizontalDiff = avenueToInteger(this.endingLocation.horizontal) - avenueToInteger(this.beginningLocation.horizontal);
+    return verticalDiff + horizontalDiff;
   }
 }
